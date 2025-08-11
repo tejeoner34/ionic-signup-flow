@@ -1,20 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+  <ion-header collapse="condense" class="ion-padding">
+    <ion-toolbar color="none">
+      <ion-title size="large">My Bank Test</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="ion-padding">
+    <ion-img
+      src="assets/icon/people-who-support-svgrepo-com.svg"
+      alt="My Icon"
+    ></ion-img>
   </div>
+
+  <ion-modal #modal trigger="openModal">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="none">
+          <ion-buttons slot="end">
+            <ion-button (click)="modal.dismiss()">
+              <ion-icon name="close" color="dark"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-nav [root]="modalComponent"></ion-nav>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>
+<ion-footer class="ion-padding ion-margin-bottom">
+  <ion-button id="openModal" expand="full" color="dark"
+    >口座を開設する</ion-button
+  >
+  <ion-button expand="full" color="dark" fill="clear" class="ion-margin-top"
+    >ログイン</ion-button
+  >
+</ion-footer>
