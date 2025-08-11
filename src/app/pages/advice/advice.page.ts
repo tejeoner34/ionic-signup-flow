@@ -10,7 +10,9 @@ import {
   IonText,
   IonFooter,
   IonButton,
+  IonNavLink,
 } from '@ionic/angular/standalone';
+import { AgreePage } from '../agree/agree.page';
 
 @Component({
   selector: 'app-advice',
@@ -18,19 +20,18 @@ import {
   styleUrls: ['./advice.page.scss'],
   standalone: true,
   imports: [
+    IonNavLink,
     IonButton,
     IonFooter,
     IonText,
     IonImg,
     IonContent,
-    IonHeader,
-    IonTitle,
-    IonToolbar,
     CommonModule,
     FormsModule,
   ],
 })
 export class AdvicePage implements OnInit {
+  agreePage = AgreePage;
   constructor() {}
 
   ngOnInit() {}
