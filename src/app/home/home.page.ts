@@ -11,15 +11,18 @@ import {
   IonButtons,
   IonNav,
   IonIcon,
+  IonAlert,
 } from '@ionic/angular/standalone';
 import { AdvicePage } from '../pages/advice/advice.page';
 import { addIcons } from 'ionicons';
 import { close } from 'ionicons/icons';
+import { ModalExistAlertComponent } from '../components/modal-exist-alert/modal-exist-alert.component';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   imports: [
+    IonAlert,
     IonIcon,
     IonNav,
     IonButtons,
@@ -31,6 +34,7 @@ import { close } from 'ionicons/icons';
     IonToolbar,
     IonTitle,
     IonContent,
+    ModalExistAlertComponent,
   ],
 })
 export class HomePage {

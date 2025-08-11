@@ -16,7 +16,7 @@
       <ion-header>
         <ion-toolbar color="none">
           <ion-buttons slot="end">
-            <ion-button (click)="modal.dismiss()">
+            <ion-button id="present-alert">
               <ion-icon name="close" color="dark"></ion-icon>
             </ion-button>
           </ion-buttons>
@@ -24,6 +24,9 @@
       </ion-header>
       <ion-content>
         <ion-nav [root]="modalComponent"></ion-nav>
+        <app-modal-exist-alert
+          (onClose)="modal.dismiss()"
+        ></app-modal-exist-alert>
       </ion-content>
     </ng-template>
   </ion-modal>

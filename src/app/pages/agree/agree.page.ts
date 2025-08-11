@@ -14,6 +14,8 @@ import {
   IonList,
   IonItem,
   IonCheckbox,
+  IonCard,
+  IonCardContent,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -22,6 +24,8 @@ import {
   styleUrls: ['./agree.page.scss'],
   standalone: true,
   imports: [
+    IonCardContent,
+    IonCard,
     IonCheckbox,
     IonItem,
     IonList,

@@ -30,27 +30,27 @@
     <li>登録完了</li>
   </ul>
 
-  <ion-list>
-    <ion-item>
-      <ion-checkbox
-        alignment="start"
-        label-placement="end"
-        name="agree"
-        [(ngModel)]="agreeChecked"
-        required
-        helper-text="lorem adsa asd adsa asd"
-        >Aligned to the Start</ion-checkbox
-      >
-    </ion-item>
-  </ion-list>
+  <div class="ion-color ion-color-light">
+    <ion-list>
+      <ion-item color="none">
+        <ion-checkbox
+          alignment="start"
+          label-placement="end"
+          name="agree"
+          [(ngModel)]="agreeChecked"
+          required
+          helper-text="lorem adsa asd adsa asd"
+          >Aligned to the Start</ion-checkbox
+        >
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
 
-<ion-footer class="ion-padding ion-margin-bottom">
+<ion-footer [translucent]="false">
   <ion-toolbar>
-    <ion-nav-link router-direction="forward">
-      <ion-button expand="full" color="dark" [disabled]="!agreeChecked"
-        >申込む</ion-button
-      >
+    <ion-nav-link router-direction="forward" [component]="">
+      <ion-button expand="full" color="dark">次へ</ion-button>
     </ion-nav-link>
   </ion-toolbar>
 </ion-footer>
