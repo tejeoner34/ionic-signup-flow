@@ -50,7 +50,9 @@
 <ion-footer [translucent]="false">
   <ion-toolbar>
     <ion-nav-link router-direction="forward" [component]="">
-      <ion-button expand="full" color="dark">次へ</ion-button>
+      <ion-button expand="full" color="dark" [disabled]="agreeChecked"
+        >次へ</ion-button
+      >
     </ion-nav-link>
   </ion-toolbar>
 </ion-footer>
